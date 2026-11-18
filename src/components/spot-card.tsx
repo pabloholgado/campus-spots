@@ -1,4 +1,5 @@
 
+import { CategoryBadge } from "@/components/category-badge";
 import { CATEGORY_EMOJI, Spot } from "@/data/spots";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -15,6 +16,7 @@ export function SpotCard({ spot }: Props) {
         <Text style={styles.description} numberOfLines={2}>
           {spot.description}
         </Text>
+        <CategoryBadge category={spot.category} />
       </View>
     </View>
   );
@@ -22,14 +24,15 @@ export function SpotCard({ spot }: Props) {
 
 const styles = StyleSheet.create({
   card: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 12,
-    padding: 16,
-    marginBottom: 12,
-    borderRadius: 12,
-    backgroundColor: "white",
-  },
+  flexDirection: "row",
+  alignItems: "center",
+  gap: 12,
+  padding: 16,
+  marginBottom: 12,
+  borderRadius: 12,
+  backgroundColor: "white",
+  boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.12)",
+},
   emoji: {
     fontSize: 32,
   },

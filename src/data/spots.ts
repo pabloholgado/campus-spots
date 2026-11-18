@@ -1,4 +1,4 @@
-export type Category = "sight" | "food" | "park" | "museum" | "campus";
+export type Category = "sight" | "food" | "park" | "museum" | "campus" | "bar";
 
 export interface Spot {
   id: string;
@@ -15,6 +15,7 @@ export const CATEGORY_EMOJI: Record<Category, string> = {
   park: "🌳",
   museum: "🏛️",
   campus: "🎓",
+  bar: "🍹",
 };
 
 export const SPOTS: Spot[] = [
@@ -74,4 +75,30 @@ export const SPOTS: Spot[] = [
     latitude: 50.0711,
     longitude: 19.9439,
   },
+
+{
+  id: "alchemia",
+  name: "Alchemia",
+  category: "bar",
+  description: "An atmospheric bar in Kazimierz, known for its candlelit rooms and live music.",
+  latitude: 50.0523,
+  longitude: 19.9449,
+},
+{
+  id: "camelot",
+  name: "Camelot Cafe",
+  category: "food",
+  description: "A cosy cafe in the Old Town, known for homemade cakes and hot chocolate.",
+  latitude: 50.0630,
+  longitude: 19.9391,
+},
+{
+  id: "barbican",
+  name: "Krakow Barbican",
+  category: "sight",
+  description: "A medieval brick fortress near St Florian's Gate, once part of the city defences.",
+  latitude: 50.0655,
+  longitude: 19.9416,
+},
+
 ];
